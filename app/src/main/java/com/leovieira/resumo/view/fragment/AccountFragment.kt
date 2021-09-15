@@ -1,4 +1,4 @@
-package com.leovieira.resumo.view
+package com.leovieira.resumo.view.fragment
 
 import androidx.fragment.app.Fragment
 import com.leovieira.resumo.R

@@ -1,4 +1,4 @@
-package com.leovieira.resumo
+package com.leovieira.resumo.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,6 +7,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
+import com.leovieira.resumo.R
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
