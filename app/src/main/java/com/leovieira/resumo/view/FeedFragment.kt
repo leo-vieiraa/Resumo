@@ -25,7 +25,7 @@ class FeedFragment : Fragment(R.layout.feed_fragment) {
     private val adapterFeed = FeedImageAdapter()
 
     private val observerImages = Observer<List<Image>> {
-        adapterFeed.submitList(it)
+        adapterFeed.update(it)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

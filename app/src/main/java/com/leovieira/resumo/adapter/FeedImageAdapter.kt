@@ -19,6 +19,8 @@ import com.leovieira.resumo.model.Image
 
 class FeedImageAdapter : ListAdapter<Image, FeedImageViewHolder>(ImageDiffUtilItemCallback()) {
 
+    var listOfImage = mutableListOf<Image>()
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FeedImageViewHolder {
         LayoutInflater.from(parent.context).inflate(R.layout.feed_item, parent, false).apply {
             return FeedImageViewHolder(this)
@@ -30,6 +32,15 @@ class FeedImageAdapter : ListAdapter<Image, FeedImageViewHolder>(ImageDiffUtilIt
             holder.bind(image)
         }
     }
+
+    fun update(newList: List<Image>, clear: Boolean = false) {
+        if (clear) {
+            listOfImage.clear()
+        }
+        listOfImage.addAll(newList)
+        submitList(listOfImage.toMutableList())
+    }
+
 }
 
 class FeedImageViewHolder(view: View) : RecyclerView.ViewHolder(view) {
